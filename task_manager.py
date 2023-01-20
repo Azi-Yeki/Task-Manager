@@ -136,13 +136,13 @@ Task description:\t {contents[2]}\n''')
 
         print(f'There are {tasks} tasks and {users} users')
 
-    #if the user chooses to exit the program
+    #if the user chooses to exit the program entirely
     #the loop is exited
     elif menu == 'e':
         print('Goodbye!!!')
         exit()
 
     #if the user enters something that isn't on the menu
-    #the message gets displayed and they go back to the menu
+    #the message gets displayed and they go back to the main menu
     else:
         print("You have made a wrong choice, Please Try again")
