@@ -57,6 +57,7 @@ e - Exit
     #if you aren't the admin, a message letting you know will be displayed
     #a new username and password are entered. the password is confirmed
     #if both passwords match, the registering was successful
+    #a message letting you know is displayed
     if menu == 'r':
         with open('user.txt', 'a+') as g:
             if username == "admin":
@@ -138,6 +139,7 @@ Task description:\t {contents[2]}\n''')
 
     #if the user chooses to exit the program entirely
     #the loop is exited
+    #The goodbye message is displayed
     elif menu == 'e':
         print('Goodbye!!!')
         exit()
