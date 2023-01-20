@@ -60,12 +60,12 @@ e - Exit
     if menu == 'r':
         with open('user.txt', 'a+') as g:
             if username == "admin":
-                new_username = input("Enter a new username: ")
+                new_user = input("Enter a new username: ")
                 new_password = input("Enter new user's password: ")
                 password_confirmation = input("Confirm new user's password: ")
                 if new_password == password_confirmation:
                     print("User registered successfully")
-                    g.write(f'\n{new_username}, {new_password}')
+                    g.write(f'\n{new_user}, {new_password}')
                 elif new_password != password_confirmation:
                     print("Passwords do not match")
 
@@ -74,7 +74,7 @@ e - Exit
 
             g.close()
 
-    #if they choose this option
+    #if they choose to add a new task
     #the details of the task are entered by the user
     #it is then written to the tasks.txt file
     elif menu == 'a':
@@ -136,13 +136,13 @@ Task description:\t {contents[2]}\n''')
 
         print(f'There are {tasks} tasks and {users} users')
 
-    #if the user chooses to exit the program
+    #if the user chooses to exit the program entirely
     #the loop is exited
     elif menu == 'e':
         print('Goodbye!!!')
         exit()
 
     #if the user enters something that isn't on the menu
-    #the message gets displayed
+    #the message gets displayed and they go back to the main menu
     else:
         print("You have made a wrong choice, Please Try again")
